@@ -43,7 +43,7 @@ CyMetadater permite analizar metadatos de los siguientes formatos de imagen:
 | `.bmp`  | Windows Paint, capturas antiguas de Windows                  |
 | `.webp` | Imágenes web (Google Chrome, WhatsApp Web, apps móviles)     |
 | `.gif`  | Redes sociales, navegadores, apps de mensajería              |
-| `.heic` | iPhone (iOS 11+), iPad, algunos Mac modernos                 |
+| `.heic` | iPhone (8/9/10/11+), iPad, algunos Mac modernos                 |
   
 ---
 
