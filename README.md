@@ -136,7 +136,7 @@ python CyMetadater.py
 ## ⚙️ 2.1 Compilación básica de .exe dependiente tras clonado desde 🪟 Windows
 
 ```bash
-# Crear el .exe del programa 
+# Crear el .exe del programa siendo versión binario ligero, dependiente de sus librerias
 git clone https://github.com/cyberiuscompany/CyMetadater.git
 cd CyMetadater
 pyinstaller CyMetadater.spec
@@ -159,7 +159,7 @@ que se encuentre en la carpeta adyance que veras junto al .exe
 ## ⚙️ 2.2 Compilación avanzada de .exe independiente tras clonado desde 🪟 Windows
 
 ```bash
-# Crear el .exe del programa versión binario pesado, con todo incluido
+# Crear el .exe del programa siendo versión binario pesado, con todo incluido
 git clone https://github.com/cyberiuscompany/CyMetadater.git
 cd CyMetadater
 pip install pyinstaller
