@@ -34,14 +34,16 @@ Esta es una herramienta visual desarrollada en Python con PyQt5 que permite anal
 
 CyMetadater permite analizar metadatos de los siguientes formatos de imagen:
 
-- `.jpg`
-- `.jpeg`
-- `.png`
-- `.tiff`
-- `.bmp`
-- `.webp`
-- `.gif`
-- `.heic`
+| Formato | Dispositivos / Origen común                                  |
+|---------|--------------------------------------------------------------|
+| `.jpg`  | Cámaras digitales, móviles Android, iPhone, WhatsApp         |
+| `.jpeg` | iPhone, escáneres, cámaras compactas, software de edición    |
+| `.png`  | Capturas de pantalla (PC y móvil), editores gráficos         |
+| `.tiff` | Escáneres profesionales, impresoras, software de fotografía  |
+| `.bmp`  | Windows Paint, capturas antiguas de Windows                  |
+| `.webp` | Imágenes web (Google Chrome, WhatsApp Web, apps móviles)     |
+| `.gif`  | Redes sociales, navegadores, apps de mensajería              |
+| `.heic` | iPhone (iOS 11+), iPad, algunos Mac modernos                 |
   
 ---
 
