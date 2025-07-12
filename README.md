@@ -139,6 +139,7 @@ python CyMetadater.py
 # Crear el .exe del programa siendo versión binario ligero, dependiente de sus librerias
 git clone https://github.com/cyberiuscompany/CyMetadater.git
 cd CyMetadater
+pip install pyinstaller
 pyinstaller CyMetadater.spec
 
 # Ejecutar el .exe del programa
