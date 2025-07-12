@@ -7,14 +7,8 @@
 ![Uso](https://img.shields.io/badge/uso-solo%20legal-important)
 ![Python](https://img.shields.io/badge/python-3.7%2B-yellow)
 
-# Plantilla
-Este es la plantilla que utilizo para la creación de mis proyectos/herramientas de ciberseguridad
-
-Esplicación que hace la herramienta.
-
-- GitHub Pages si la herramienta tiene: https://cyberiuscompany.github.io/NOMBRE-HERRAMIENTA
-- DeepWiki de la herramienta: https://deepwiki.com/RELLENAR+INDEXAR
----
+# CyMetadater
+Esta es una herramienta visual desarrollada en Python con PyQt5 que permite analizar, visualizar, limpiar y exportar metadatos EXIF de imágenes. Está pensada para tareas de análisis forense, privacidad y auditoría de archivos multimedia.
 
 <p align="center">
   <img src="icono.png" alt="Banner" width="500"/>
@@ -22,10 +16,27 @@ Esplicación que hace la herramienta.
 
 ---
 
+## Características principales
+
+- ✅ Carga de imágenes por botón o arrastrar y soltar.
+- 📸 Vista previa de la imagen seleccionada.
+- 🔍 Visualización detallada de metadatos EXIF (incluye GPS, fecha, cámara, etc.).
+- 🧹 Limpieza completa de metadatos EXIF (anonimización).
+- 🌍 Detección de coordenadas GPS con vista integrada en Google Maps.
+- 🧭 Enlace directo a GeoHack (Wikipedia Maps) para análisis geográfico forense.
+- 📤 Exportación de metadatos a formatos `.json` y `.txt`.
+- 🔎 Búsqueda dinámica de metadatos dentro de la tabla.
+- 🖼️ Soporte para múltiples formatos de imagen: `.jpg`, `.jpeg`, `.png`, `.tiff`, `.bmp`, `.webp`, `.gif`, `.heic`.
+- 🧭 Navegación por varias imágenes cargadas a la vez.
+- 🎯 Minimización a bandeja del sistema (System Tray).
+- 🛡️ Estilo visual adaptado a auditorías digitales y temas oscuros.
+
+---
+
 ## 🎥 Demostración
 
 <p align="center">
-  <img src="docs/Demo.gif" width="1200" alt="Demostración de CyberiusUnzipCracker">
+  <img src="Demo.gif" width="1200" alt="Demostración de CyberiusUnzipCracker">
 </p>
 
 ---
