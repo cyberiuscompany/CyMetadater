@@ -41,41 +41,41 @@ Esta es una herramienta visual desarrollada en Python con PyQt5 que permite anal
 
 ---
 
-## Fotos de Herramienta
+## 📸 Fotos de Herramienta
 
-<h2 align="center">Foto 1</h2>
+<h2 align="center">Interfaz Principal</h2>
 <p align="center">
-  <img src="Foto1" alt="Foto 1" width="500"/>
+  <img src="Fotos Herramienta/Interfaz Pricipal.png" alt="Foto 1" width="500"/>
 </p>
 
-<h2 align="center">Foto 2</h2>
+<h2 align="center">Analizando Foto sin GPS</h2>
 <p align="center">
-  <img src="Foto2" alt="Foto 2" width="500"/>
+  <img src="Fotos Herramienta/Analisis Foto sin GPS.png" alt="Foto 2" width="500"/>
 </p>
 
-<h2 align="center">Foto 3</h2>
+<h2 align="center">Analizando Foto con GPS</h2>
 <p align="center">
-  <img src="Foto3" alt="Foto 3" width="500"/>
+  <img src="Fotos Herramienta/Analisis Foto con GPS.png" alt="Foto 3" width="500"/>
 </p>
 
+<h2 align="center">Boton Ubicación GPS</h2>
+<p align="center">
+  <img src="Fotos Herramienta/Boton Ubicación GPS.png" alt="Foto 3" width="500"/>
+</p>
 
-## Descripción
+<h2 align="center">Encntrando ubicación GPS</h2>
+<p align="center">
+  <img src="Fotos Herramienta/Ubicación GPS encontrada.png" alt="Foto 3" width="500"/>
+</p>
 
-**NOMBRE-HERRAMIENTA** es una herramienta.....RELLENAR. 
+## Requisitos
 
-Diseñada con un enfoque de ciberseguridad para......RELLENAR.
-
-## 🚀 Funcionalidades principales
-
-- RELLENAR.
-- RELLENAR.
-- RELLENAR.
-
-## 🧰 Tecnologías utilizadas
-
-- RELLENAR.
-- RELLENAR.
-- RELLENAR.
+- Python 3.7 o superior
+- PyQt5
+- piexif
+- pillow
+- pillow-heif
+- PyQtWebEngine
 
 ## 📁 Estructura del proyecto
 
