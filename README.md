@@ -152,8 +152,8 @@ CyMetadater/
 Si compilas con `pyinstaller CyMetadater.spec`, el ejecutable `.exe` se generará dentro de la carpeta `dist/`:
 `dist/CyMetadater/CyMetadater.exe`
 `dist/CyMetadater.exe`
-Este .exe solo va funcionar, siempre y cuando no los muevas de de estar carpeta, dado que "depende" las librerias
-que se encuentre en la carpeta que vea ahí.
+Este .exe solo va funcionar, siempre y cuando no lo muevas de su carpeta, dado que "depende" las librerias
+que se encuentre en la carpeta adyance que veras junto al .exe
 ```
 
 ## ⚙️ 2.2 Compilación avanzada de .exe independiente tras clonado desde 🪟 Windows
