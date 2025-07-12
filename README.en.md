@@ -161,7 +161,7 @@ CyMetadater supports the analysis of metadata in the following image formats:
 git clone https://github.com/cyberiuscompany/CyMetadater.git
 cd CyMetadater
 python -m venv venv (Optional)
-.env\Scriptsctivate (Optional)
+.\venv\Scripts\activate (Optional)
 pip install -r requirements.txt
 python CyMetadater.py
 ```
