@@ -80,9 +80,22 @@ Esta es una herramienta visual desarrollada en Python con PyQt5 que permite anal
 ## 📁 Estructura del proyecto
 
 ```bash
-├── fichero.py # Función Principal
-├── fichero.js # Función Principal
-├── fichero.html # Función Principal
+├── .github/                        # Archivos de configuración para GitHub (acciones, plantillas, etc.)
+├── Fotos Herramienta/             # Imágenes de demostración o capturas del uso de la herramienta
+├── .gitattributes                 # Configuración de atributos Git
+├── cyberius.ico                   # Icono principal de la aplicación
+├── CyMetadater.py                 # Archivo principal con la interfaz y la lógica de la aplicación
+├── CyMetadater.spec               # Archivo de configuración para PyInstaller (compilación a ejecutable)
+├── Demo.gif                       # Demostración animada del funcionamiento de la herramienta
+├── DISCLAIMER.md                  # Aviso legal o descargo de responsabilidad
+├── icono.png                      # Icono alternativo o para la interfaz
+├── LICENCE                        # Licencia del proyecto (probablemente MIT)
+├── Mesa Salon Cyberius_SinGPS.JPG  # Imagen de prueba sin datos GPS
+├── README.md                      # Documentación principal del proyecto
+├── README.txt                     # Versión alternativa del README (quizás para ejecutables)
+├── requirements.txt               # Lista de dependencias del proyecto
+├── Silla Lectura Cyberius_ConGPS.HEIC  # Imagen de prueba con datos GPS
+└── version.txt                    # Versión actual de la herramienta
 ```
 ---
 
