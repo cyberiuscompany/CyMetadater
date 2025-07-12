@@ -26,7 +26,6 @@ Esta es una herramienta visual desarrollada en Python con PyQt5 que permite anal
 - 🧭 Enlace directo a GeoHack (Wikipedia Maps) para análisis geográfico forense.
 - 📤 Exportación de metadatos a formatos `.json` y `.txt`.
 - 🔎 Búsqueda dinámica de metadatos dentro de la tabla.
-- 🖼️ Soporte para múltiples formatos de imagen: `.jpg`, `.jpeg`, `.png`, `.tiff`, `.bmp`, `.webp`, `.gif`, `.heic`.
 - 🧭 Navegación por varias imágenes cargadas a la vez.
 - 🎯 Minimización a bandeja del sistema (System Tray).
 - 🛡️ Estilo visual adaptado a auditorías digitales y temas oscuros.
