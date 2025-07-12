@@ -143,7 +143,6 @@ pip install pyinstaller
 pyinstaller CyMetadater.spec
 
 # Ejecutar el .exe del programa
-
 CyMetadater/
 ├── dist/
 │   └── CyMetadater/
