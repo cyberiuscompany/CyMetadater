@@ -149,13 +149,9 @@ CyMetadater/
 │       └── CyMetadater.exe  ← ESTE ES EL EJECUTABLE
 
 ⚠️ **¡Atención!**
-
 Si compilas con `pyinstaller CyMetadater.spec`, el ejecutable `.exe` se generará dentro de la carpeta `dist/`:
-
 `dist/CyMetadater/CyMetadater.exe`
-
-Si usas el modo `--onefile`, estará directamente en `dist/`:
-
 `dist/CyMetadater.exe`
+Este .exe solo va funcionar, siempre y cuando no los muevas de de estar carpeta
 ```
 
