@@ -8,16 +8,15 @@
 ![Python](https://img.shields.io/badge/python-3.7%2B-yellow)
 
 <p align="center">
-  <a href="README.md">
-    <img src="https://flagcdn.com/w40/es.png" alt="Español" title="Español">
-    <strong>Español</strong>
-  </a>
+  <img src="https://flagcdn.com/w40/es.png" alt="Español" title="Español">
+  <strong>Español</strong>
   &nbsp;|&nbsp;
-  <a href="READMEen.md">
+  <a href="README.en.md">
     <img src="https://flagcdn.com/w40/us.png" alt="English" title="English">
     <strong>English</strong>
   </a>
 </p>
+
 
 
 # CyMetadater
