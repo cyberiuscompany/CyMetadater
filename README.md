@@ -114,34 +114,48 @@ Esta es una herramienta visual desarrollada en Python con PyQt5 que permite anal
 ## ⚙️ 1.1 Instalación básica con clonado 🪟 Windows
 
 ```bash
-git clone..........
-cd NOMBRE-HERRAMIENTA
+git clone https://github.com/cyberiuscompany/CyMetadater.git
+cd CyMetadater
 python -m venv venv (No es obligatorio este comando)
 .\venv\Scripts\activate (No es obligatorio este comando)
 pip install -r requirements.txt
-python NOMBRE-HERRAMIENTA
+python CyMetadater.py
 ```
 
 ## ⚙️ 1.2 Instalación básica con clonado 🐧 Linux / macOS
 
 ```bash
-git clone..........
-cd NOMBRE-HERRAMIENTA
+git clone https://github.com/cyberiuscompany/CyMetadater.git
+cd CyMetadater
 python3 -m venv venv (No es obligatorio este comando)
 source venv/bin/activate (No es obligatorio este comando)
 pip install -r requirements.txt
-python3 NOMBRE-HERRAMIENTA
+python CyMetadater.py
 ```
 
-## ⚙️ 2 Instalación como si fuese paquete profesional
+## ⚙️ 2.1 Compilación básica tras clonado desde 🪟 Windows
 
 ```bash
-git clone..........
-cd NOMBRE-HERRAMIENTA
-python3 -m venv venv (No es obligatorio este comando)
-source venv/bin/activate (No es obligatorio este comando)
-pip install -r requirements.txt
-pip install .
-NOMBRE-HERRAMIENTA
+# Crear el .exe del programa 
+git clone https://github.com/cyberiuscompany/CyMetadater.git
+cd CyMetadater
+pyinstaller CyMetadater.spec
+
+# Ejecutar el .exe del programa
+
+CyMetadater/
+├── dist/
+│   └── CyMetadater/
+│       └── CyMetadater.exe  ← ESTE ES EL EJECUTABLE
+
+⚠️ **¡Atención!**
+
+Si compilas con `pyinstaller CyMetadater.spec`, el ejecutable `.exe` se generará dentro de la carpeta `dist/`:
+
+`dist/CyMetadater/CyMetadater.exe`
+
+Si usas el modo `--onefile`, estará directamente en `dist/`:
+
+`dist/CyMetadater.exe`
 ```
 
