@@ -133,7 +133,7 @@ pip install -r requirements.txt
 python CyMetadater.py
 ```
 
-## ⚙️ 2.1 Compilación básica tras clonado desde 🪟 Windows
+## ⚙️ 2.1 Compilación básica de .exe dependiente tras clonado desde 🪟 Windows
 
 ```bash
 # Crear el .exe del programa 
@@ -152,6 +152,27 @@ CyMetadater/
 Si compilas con `pyinstaller CyMetadater.spec`, el ejecutable `.exe` se generará dentro de la carpeta `dist/`:
 `dist/CyMetadater/CyMetadater.exe`
 `dist/CyMetadater.exe`
-Este .exe solo va funcionar, siempre y cuando no los muevas de de estar carpeta
+Este .exe solo va funcionar, siempre y cuando no los muevas de de estar carpeta, dado que "depende" las librerias
+que se encuentre en la carpeta que vea ahí.
+```
+
+## ⚙️ 2.2 Compilación avanzada de .exe independiente tras clonado desde 🪟 Windows
+
+```bash
+# Crear el .exe del programa versión binario pesado, con todo incluido
+git clone https://github.com/cyberiuscompany/CyMetadater.git
+cd CyMetadater
+pip install pyinstaller
+pyinstaller --onefile --windowed --icon=cyberius.ico --version-file=version.txt CyMetadater.py
+
+# Ejecutar el .exe del programa
+CyMetadater/
+├── dist/
+│   └── CyMetadater/
+│       └── CyMetadater.exe  ← ESTE ES EL EJECUTABLE
+
+⚠️ **¡Atención!**
+Este binario lo puedes mover de lugar, dado que dentro del .exe contiene todo lo necesario para funcionar
+pero taradara mas en abrirse, al ocupar mas tamaña y cargar mas funciones, librerías y DLLs.
 ```
 
