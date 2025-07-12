@@ -173,6 +173,6 @@ CyMetadater/
 
 ⚠️ **¡Atención!**
 Este binario lo puedes mover de lugar, dado que dentro del .exe contiene todo lo necesario para funcionar
-pero tardara mas en abrirse, al ocupar mas tamaña y cargar mas funciones, librerías y DLLs.
+pero tardara mas en abrirse, al ocupar mas tamaño y cargar mas funciones, librerías y DLLs.
 ```
 
