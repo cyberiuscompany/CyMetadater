@@ -1,12 +1,13 @@
 
-[![YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@CyberiusCompany)
-![GitHub release downloads](https://img.shields.io/github/downloads/CyberiusCompany/CyMetadater/latest/total)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![System](https://img.shields.io/badge/windows-x64-green)
-![System](https://img.shields.io/badge/linux-x64-green)
-![License](https://img.shields.io/badge/license-Private-red)
-![Usage](https://img.shields.io/badge/usage-legal%20only-important)
+![GitHub release downloads](https://img.shields.io/github/downloads/CyberiusCompany/Cyberius-Unzip-Cracker/latest/total)
+![Versión](https://img.shields.io/badge/versión-1.0.0-blue)
+![Sistema](https://img.shields.io/badge/windows-x64-green)
+![Sistema](https://img.shields.io/badge/linux-x64-green)
+![Licencia](https://img.shields.io/badge/licencia-Privada-red)
+![Uso](https://img.shields.io/badge/uso-solo%20legal-important)
 ![Python](https://img.shields.io/badge/python-3.7%2B-yellow)
+![Compatibilidad](https://img.shields.io/badge/compatible-con%20PyInstaller-brightgreen)
+![Tested on](https://img.shields.io/badge/tested%20on-Windows%2010%2F11%20%7C%20Ubuntu%2022.04-blue)
 
 <p align="center">
   <a href="README.md">
