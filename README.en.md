@@ -9,14 +9,15 @@
 ![Tested on](https://img.shields.io/badge/tested%20on-Windows%2010%2F11%20%7C%20Ubuntu%2022.04-blue)
 
 <p align="center">
+  <img src="https://flagcdn.com/w40/us.png" alt="English" title="English">
+  <strong>English</strong>
+  &nbsp;|&nbsp;
   <a href="README.md">
     <img src="https://flagcdn.com/w40/es.png" alt="Español" title="Español">
     <strong>Español</strong>
   </a>
-  &nbsp;|&nbsp;
-  <img src="https://flagcdn.com/w40/us.png" alt="English" title="English">
-  <strong>English</strong>
 </p>
+
 
 # CyMetadater
 This is a visual tool developed in Python with PyQt5 that allows you to analyze, view, clean, and export EXIF metadata from images. It is designed for forensic analysis, privacy, and multimedia file audits.
