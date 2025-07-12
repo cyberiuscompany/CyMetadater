@@ -10,14 +10,12 @@
 
 <p align="center">
   <a href="README.md">
-    <img src="https://flagcdn.com/w40/es.png" alt="Spanish" title="Spanish">
-    <strong>Spanish</strong>
+    <img src="https://flagcdn.com/w40/es.png" alt="Español" title="Español">
+    <strong>Español</strong>
   </a>
   &nbsp;|&nbsp;
-  <a href="README.en.md">
-    <img src="https://flagcdn.com/w40/us.png" alt="English" title="English">
-    <strong>English</strong>
-  </a>
+  <img src="https://flagcdn.com/w40/us.png" alt="English" title="English">
+  <strong>English</strong>
 </p>
 
 # CyMetadater
