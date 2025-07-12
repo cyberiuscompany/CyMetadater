@@ -1,5 +1,3 @@
-🇪🇸 [Español](README.md) | 🇬🇧 [English](README.en.md) 
-
 [![YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@CyberiusCompany)
 ![GitHub release downloads](https://img.shields.io/github/downloads/CyberiusCompany/Cyberius-Unzip-Cracker/latest/total)
 ![Versión](https://img.shields.io/badge/versión-1.0.0-blue)
@@ -8,6 +6,19 @@
 ![Licencia](https://img.shields.io/badge/licencia-Privada-red)
 ![Uso](https://img.shields.io/badge/uso-solo%20legal-important)
 ![Python](https://img.shields.io/badge/python-3.7%2B-yellow)
+
+<p align="center">
+  <a href="README.md">
+    <img src="https://flagcdn.com/w40/es.png" alt="Español" title="Español">
+    <strong>Español</strong>
+  </a>
+  &nbsp;|&nbsp;
+  <a href="README-ES.en.md">
+    <img src="https://flagcdn.com/w40/us.png" alt="English" title="English">
+    <strong>English</strong>
+  </a>
+</p>
+
 
 # CyMetadater
 Esta es una herramienta visual desarrollada en Python con PyQt5 que permite analizar, visualizar, limpiar y exportar metadatos EXIF de imágenes. Está pensada para tareas de análisis forense, privacidad y auditoría de archivos multimedia.
