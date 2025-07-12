@@ -113,6 +113,25 @@ CyMetadater permite analizar metadatos de los siguientes formatos de imagen:
 ```
 ---
 
+### 🧼 Plataformas que eliminan metadatos EXIF al subir imágenes
+
+| Plataforma           | ¿Elimina metadatos EXIF? | Detalles importantes                                                                 |
+|----------------------|---------------------------|----------------------------------------------------------------------------------------|
+| **WhatsApp**         | ✅ Sí                     | Comprime y elimina todos los EXIF, incluso ubicación.                                 |
+| **Instagram**        | ✅ Sí                     | Borra metadatos al subir, tanto en publicaciones como historias.                     |
+| **Facebook**         | ✅ Sí                     | Elimina EXIF en fotos subidas públicamente, aunque conserva internamente para análisis. |
+| **Twitter (X)**      | ✅ Sí                     | Borra metadatos, aunque antes de 2020 permitía conservar algunos si eran JPG.        |
+| **Telegram**         | 🚫 No (por defecto)       | Si se envía como archivo, mantiene EXIF. Si se envía como foto comprimida, lo borra. |
+| **Google Fotos**     | ✅ Parcial                | Elimina algunos EXIF al compartir enlaces, pero mantiene todo en tu cuenta personal. |
+| **iCloud**           | 🚫 No                     | Mantiene EXIF al subir fotos desde dispositivos Apple.                                |
+| **Discord**          | ✅ Sí                     | Elimina metadatos en la vista previa. A veces puede conservar algunos en la descarga.|
+| **LinkedIn**         | ✅ Sí                     | Elimina metadatos al subir imágenes a tu perfil o publicaciones.                     |
+| **TikTok**           | ✅ Sí                     | Las miniaturas y vídeos/imágenes exportadas están limpias de EXIF.                   |
+| **Reddit**           | ✅ Sí                     | Borra todos los metadatos de las imágenes subidas.                                   |
+| **WeTransfer**       | 🚫 No                     | Transfiere los archivos tal como están, incluidos los metadatos.                     |
+
+---
+
 ## 📄 Documentación adicional
 
 - [🤝 Código de Conducta](.github/CODE_OF_CONDUCT.md)
