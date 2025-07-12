@@ -31,6 +31,19 @@ Esta es una herramienta visual desarrollada en Python con PyQt5 que permite anal
 - 🎯 Minimización a bandeja del sistema (System Tray).
 - 🛡️ Estilo visual adaptado a auditorías digitales y temas oscuros.
 
+### 📁 Formatos de imagen compatibles
+
+CyMetadater permite analizar metadatos de los siguientes formatos de imagen:
+
+- `.jpg`
+- `.jpeg`
+- `.png`
+- `.tiff`
+- `.bmp`
+- `.webp`
+- `.gif`
+- `.heic`
+  
 ---
 
 ## 🎥 Demostración
