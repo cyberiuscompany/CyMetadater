@@ -8,20 +8,6 @@
 ![Python](https://img.shields.io/badge/python-3.7%2B-yellow)
 ![Tested on](https://img.shields.io/badge/tested%20on-Windows%2010%2F11%20%7C%20Ubuntu%2022.04-blue)
 
-<p align="center">
-  <sub>
-    <a href="https://github.com/cyberiuscompany/CyMetadater">CyMetadater</a> —
-    <a href="https://github.com/cyberiuscompany/CyCamaraViewer">CyCamaraViewer</a> —
-    <a href="https://github.com/cyberiuscompany/CyPasswordGenerator">CyPasswordGen</a> —
-    <a href="https://github.com/cyberiuscompany/CyDoxer">CyDoxer</a> —
-    <a href="https://github.com/cyberiuscompany/CyGeolocalizator">CyGeolocalizator</a> —
-    <a href="https://github.com/cyberiuscompany/CyUSBGuard">CyUSBGuard</a> —
-    <a href="https://github.com/cyberiuscompany/CyDorker">CyDorker</a> —
-    <a href="https://github.com/cyberiuscompany/Navegator_Inspec">Navegator_Inspec</a> —
-    <a href="https://github.com/cyberiuscompany/Perm_Scope">Perm_Scope</a>
-    <a href="https://github.com/cyberiuscompany/Cyberius-Unzip-Cracker">Cyberius-Unzip-Cracker</a>
-  </sub>
-</p>
 
 <p align="center">
   <a href="https://github.com/cyberiuscompany/CyMetadater">
