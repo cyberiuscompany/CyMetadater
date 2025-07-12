@@ -12,7 +12,7 @@
   <img src="https://flagcdn.com/w40/us.png" alt="English" title="English">
   <strong>English</strong>
   &nbsp;|&nbsp;
-  <a href="README.md">
+  <a href="https://github.com/cyberiuscompany/CyMetadater">
     <img src="https://flagcdn.com/w40/es.png" alt="Español" title="Español">
     <strong>Español</strong>
   </a>
