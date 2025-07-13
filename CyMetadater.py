@@ -17,6 +17,7 @@ pillow_heif.register_heif_opener()
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QSystemTrayIcon, QMenu, QAction
 from PyQt5.QtCore import QLibraryInfo
+from PyQt5.QtWidgets import QPlainTextEdit
 
 class MetadataViewer(QWidget):
     def __init__(self):
@@ -206,57 +207,149 @@ class MetadataViewer(QWidget):
             QMessageBox.critical(self, "Error", f"No se pudo cargar la imagen:\n{e}")
 
     def load_metadata(self):
+        from PIL.TiffImagePlugin import IFDRational
+        from PIL import ExifTags
+
         self.exif_data = {}
         self.exif_raw = {}
         self.table.setRowCount(0)
+
         if not self.image_path:
             return
+
         try:
             img = Image.open(self.image_path)
+            exif_dict = {}
+            self.exif_raw = {}
+
+            # 1. Intenta extraer EXIF con piexif si hay exif embebido
             exif_bytes = img.info.get("exif", None)
-            if not exif_bytes:
-                QMessageBox.information(self, "Sin metadatos", "Esta imagen no contiene metadatos EXIF.")
-                return
-            exif_dict = piexif.load(exif_bytes)
-            self.exif_raw = exif_dict
-            for ifd_name in exif_dict:
-                if ifd_name == "thumbnail":
-                    continue
-                for tag in exif_dict[ifd_name]:
-                    tag_name = piexif.TAGS[ifd_name].get(tag, {}).get("name", tag)
-                    value = exif_dict[ifd_name][tag]
-                    if isinstance(value, bytes):
-                        try:
-                            shown_value = value.decode("utf-8").strip()
-                        except:
-                            shown_value = f"[Datos binarios: {len(value)} bytes]"
-                    elif isinstance(value, tuple):
-                        def convert_rational(val):
-                            try:
-                                return float(val[0]) / float(val[1]) if val[1] != 0 else 0
-                            except:
-                                return str(val)
-                        if all(isinstance(v, tuple) and len(v) == 2 for v in value):
-                            try:
-                                shown_value = ", ".join(f"{convert_rational(v):.6f}" for v in value)
-                            except:
+            if exif_bytes:
+                try:
+                    piexif_data = piexif.load(exif_bytes)
+                    self.exif_raw = piexif_data
+                    for ifd_name in piexif_data:
+                        if ifd_name == "thumbnail":
+                            continue
+                        for tag in piexif_data[ifd_name]:
+                            tag_name = piexif.TAGS[ifd_name].get(tag, {}).get("name", tag)
+                            value = piexif_data[ifd_name][tag]
+                            if isinstance(value, bytes):
+                                try:
+                                    shown_value = value.decode("utf-8").strip()
+                                except:
+                                    shown_value = f"[Datos binarios: {len(value)} bytes]"
+                            elif isinstance(value, tuple):
+                                def convert_rational(val):
+                                    try:
+                                        return float(val[0]) / float(val[1]) if val[1] != 0 else 0
+                                    except:
+                                        return str(val)
+                                if all(isinstance(v, tuple) and len(v) == 2 for v in value):
+                                    try:
+                                        shown_value = ", ".join(f"{convert_rational(v):.6f}" for v in value)
+                                    except:
+                                        shown_value = str(value)
+                                else:
+                                    shown_value = str(value)
+                            else:
                                 shown_value = str(value)
-                        else:
-                            shown_value = str(value)
-                    else:
-                        shown_value = str(value)
-                    self.exif_data[tag_name] = shown_value
+                            exif_dict[tag_name] = shown_value
+                except Exception as e:
+                    print("piexif error:", e)
+
+            # 2. Si no hay piexif, intenta con .getexif()
+            if not exif_dict:
+                try:
+                    raw_exif = img.getexif()
+                    for tag, value in raw_exif.items():
+                        tag_name = ExifTags.TAGS.get(tag, tag)
+                        if isinstance(value, IFDRational):
+                            value = float(value)
+                        elif isinstance(value, bytes):
+                            try:
+                                value = value.decode("utf-8")
+                            except:
+                                value = f"[Bytes: {len(value)}]"
+                        exif_dict[tag_name] = value
+                except Exception as e:
+                    print("getexif error:", e)
+
+            # 3. Si sigue vacío, añade metadatos de img.info (para PNG, TIFF, etc.)
+            if not exif_dict and img.info:
+                for k, v in img.info.items():
+                    exif_dict[k] = str(v)
+
+            if not exif_dict:
+                QMessageBox.information(self, "Sin metadatos", "No se han encontrado metadatos reconocibles.")
+                return
+
+            self.exif_data = exif_dict
             self.display_metadata()
             self.check_gps_button()
+
         except Exception as e:
             QMessageBox.critical(self, "Error", f"No se pudo extraer metadatos:\n{e}")
 
     def display_metadata(self):
         self.table.setRowCount(0)
+
         for row, (key, value) in enumerate(self.exif_data.items()):
             self.table.insertRow(row)
             self.table.setItem(row, 0, QTableWidgetItem(str(key)))
-            self.table.setItem(row, 1, QTableWidgetItem(str(value)))
+
+            # Si es bytes, intenta decodificar
+            if isinstance(value, bytes):
+                try:
+                    value = value.decode('utf-8', errors='ignore')
+                except:
+                    value = f"[Bytes: {len(value)}]"
+
+            # Si parece XML
+            is_xml = False
+            try:
+                if isinstance(value, str) and value.strip().startswith('<?xpacket') or value.strip().startswith('<'):
+                    ET.fromstring(value)
+                    is_xml = True
+            except:
+                pass
+
+            if is_xml:
+                preview = "(XML detectado - doble clic para ver)"
+                item = QTableWidgetItem(preview)
+                item.setData(Qt.UserRole, value)  # Guardamos el XML real oculto
+                self.table.setItem(row, 1, item)
+            else:
+                self.table.setItem(row, 1, QTableWidgetItem(str(value)))
+
+        # Conectamos la señal una vez
+        self.table.itemDoubleClicked.connect(self.show_xml_popup)
+    
+    def show_xml_popup(self, item):
+        if item.column() != 1:
+            return
+
+        value = item.data(Qt.UserRole)
+        if not value:
+            return
+
+        dialog = QDialog(self)
+        dialog.setWindowTitle("Vista del contenido XML")
+        dialog.setMinimumSize(700, 500)
+        layout = QVBoxLayout()
+
+        viewer = QPlainTextEdit()
+        viewer.setPlainText(value)
+        viewer.setReadOnly(True)
+        viewer.setStyleSheet("background-color: #1e1e1e; color: #83f1e8; font-family: Consolas; font-size: 12px;")
+        layout.addWidget(viewer)
+
+        close_btn = QPushButton("Cerrar")
+        close_btn.clicked.connect(dialog.close)
+        layout.addWidget(close_btn)
+
+        dialog.setLayout(layout)
+        dialog.exec_()
 
     def display_image(self):
         if not self.image_path:
