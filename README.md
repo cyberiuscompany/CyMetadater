@@ -160,6 +160,15 @@ CyMetadater permite analizar metadatos de los siguientes formatos de imagen:
 
 
 ---
+## ⚙️ 📸 Obtener fotos para analisis de ejemplo
+
+```bash
+Abrir una consola Powershell
+
+Ejecutar el siguiente comando:
+Invoke-WebRequest "https://raw.githubusercontent.com/cyberiuscompany/CyMetadater/main/Fotos%20de%20Ejemplo/Cara%20Cyberius%20foto%20con%20XML.jpg" -OutFile "Cara Cyberius foto con XML.jpg"; Invoke-WebRequest "https://raw.githubusercontent.com/cyberiuscompany/CyMetadater/main/Fotos%20de%20Ejemplo/Mesa%20Salon%20Cyberius_SinGPS.JPG" -OutFile "Mesa Salon Cyberius_SinGPS.JPG"; Invoke-WebRequest "https://raw.githubusercontent.com/cyberiuscompany/CyMetadater/main/Fotos%20de%20Ejemplo/Silla%20Lectura%20Cyberius_ConGPS.HEIC" -OutFile "Silla Lectura Cyberius_ConGPS.HEIC"
+
+```
 
 ## ⚙️ 1.1 Instalación básica con clonado 🪟 Windows
 
