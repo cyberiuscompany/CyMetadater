@@ -161,7 +161,7 @@ CyMetadater supports the analysis of metadata in the following image formats:
 
 ---
 
-## ⚙️ 📸 Obtener fotos para analisis de ejemplo
+## ⚙️ 📸 Obtain photos for sample analysis
 
 ```bash
 Open a PowerShell console
