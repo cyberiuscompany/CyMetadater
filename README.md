@@ -160,7 +160,7 @@ CyMetadater permite analizar metadatos de los siguientes formatos de imagen:
 
 
 ---
-## ⚙️ 📸 Obtener fotos para analisis de ejemplo
+## ⚙️ 📸 Obtener fotos para análisis de ejemplo
 
 ```bash
 Abrir una consola Powershell
